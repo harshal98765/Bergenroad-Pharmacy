@@ -43,7 +43,7 @@ export default function ContactForm() {
     try {
       setLoading(true)
 
-      const response = await fetch("https://rxflow-backend.onrender.com/api/mail/contact", {
+      const response = await fetch("https://rxflow-backend-80te.onrender.com/api/mail/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
