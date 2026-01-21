@@ -28,7 +28,7 @@ export default function HeroSection() {
   try {
     setLoading(true)
 
-    const response = await fetch("https://rxflow-backend.onrender.com/api/mail/rx", {
+    const response = await fetch("https://rxflow-backend-80te.onrender.com/api/mail/rx", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

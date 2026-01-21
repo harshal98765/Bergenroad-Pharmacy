@@ -12,7 +12,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["700"] })
 
 export const metadata: Metadata = {
-  title: "DrugDropRx - Pharmacy Services",
+  title: "LifeCarePharmacy Services",
   description: "Professional pharmacy services with secure prescription handling and fast delivery",
   generator: "v0.app",
   icons: {
