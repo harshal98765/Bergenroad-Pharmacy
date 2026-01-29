@@ -14,7 +14,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Life Care Pharmacy | Trusted Community Pharmacy",
+    default: "Life Care Pharmacy | Trusted Pharmacy in Jersey City NJ",
     template: "%s | Life Care Pharmacy",
   },
 
