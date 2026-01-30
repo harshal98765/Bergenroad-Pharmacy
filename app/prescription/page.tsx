@@ -149,13 +149,12 @@ export default function TransferPrescription() {
 
   return (
     <div className="relative min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 bg-gradient-to-r from-green-50/90 via-green-50/80 to-green-50/70" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-100/20 to-emerald-200/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#F0F7FF] to-[#D6EBFF]" />
 
       <div className="relative max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Transfer a Prescription</h1>
-          <p className="text-lg text-gray-600">Complete our secure form to transfer your prescriptions to us</p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#0B2C4D] mb-4">Transfer a Prescription</h1>
+          <p className="text-lg text-slate-600">Complete our secure form to transfer your prescriptions to us</p>
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12">
@@ -171,17 +170,17 @@ export default function TransferPrescription() {
                 <p className="text-gray-600 mb-6">Tell us about you so we can verify with your old pharmacy</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                  <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required />
-                  <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required />
+                  <input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" required />
+                  <input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" required />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
                     <span className="px-3 py-3 bg-gray-100 border-r border-gray-300 text-sm font-medium text-gray-700">🇺🇸 +1</span>
-                    <input type="tel" name="phone" placeholder="Phone" value={formData.phone} onChange={handleInputChange} className="flex-1 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500" required />
+                    <input type="tel" name="phone" placeholder="Phone" value={formData.phone} onChange={handleInputChange} className="flex-1 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" required />
                   </div>
 
-                  <input type="date" name="birthday" value={formData.birthday} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required />
+                  <input type="date" name="birthday" value={formData.birthday} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" required />
                 </div>
               </div>
 
@@ -190,8 +189,8 @@ export default function TransferPrescription() {
                 <p className="text-gray-600 mb-6">Tell us about your old pharmacy so we can transfer your prescriptions</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input type="text" name="previousPharmacyName" placeholder="Pharmacy Name" value={formData.previousPharmacyName} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required />
-                  <input type="text" name="previousPharmacyPhone" placeholder="Pharmacy address" value={formData.previousPharmacyPhone} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required />
+                  <input type="text" name="previousPharmacyName" placeholder="Pharmacy Name" value={formData.previousPharmacyName} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" required />
+                  <input type="text" name="previousPharmacyPhone" placeholder="Pharmacy address" value={formData.previousPharmacyPhone} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" required />
                 </div>
               </div>
 
@@ -202,8 +201,8 @@ export default function TransferPrescription() {
                 <div className="space-y-4">
                   {formData.prescriptions.map((med, index) => (
                     <div key={index} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <input type="text" placeholder="Medication Name" value={med.name} onChange={(e) => handleMedicationChange(index, "name", e.target.value)} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" />
-                      <input type="text" placeholder="Rx Number" value={med.rxNumber} onChange={(e) => handleMedicationChange(index, "rxNumber", e.target.value)} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" />
+                      <input type="text" placeholder="Medication Name" value={med.name} onChange={(e) => handleMedicationChange(index, "name", e.target.value)} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" />
+                      <input type="text" placeholder="Rx Number" value={med.rxNumber} onChange={(e) => handleMedicationChange(index, "rxNumber", e.target.value)} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" />
                     </div>
                   ))}
 
@@ -213,7 +212,7 @@ export default function TransferPrescription() {
                   </div>
 
                   {!formData.transferAllMedications && (
-                    <button type="button" onClick={addMedication} className="mt-4 px-4 py-2 text-green-700 border border-green-700 rounded-lg hover:bg-green-50 transition-colors">
+                    <button type="button" onClick={addMedication} className="mt-4 px-4 py-2 text-[#1E5FA8] border-[#1E5FA8] rounded-lg hover:bg-[#1E5FA8]/10 transition-colors">
                       + Add Another Medication
                     </button>
                   )}
@@ -224,7 +223,7 @@ export default function TransferPrescription() {
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Notes for Pharmacy (Optional)</h2>
                 <p className="text-gray-600 mb-6">Add any notes (insurance, preferences, etc.)</p>
 
-                <textarea name="notes" value={formData.notes} onChange={handleInputChange} placeholder="Enter any additional notes..." rows={6} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 resize-none" />
+                <textarea name="notes" value={formData.notes} onChange={handleInputChange} placeholder="Enter any additional notes..." rows={6} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8] resize-none" />
               </div>
 
               <div>
@@ -236,15 +235,15 @@ export default function TransferPrescription() {
                 </h3>
 
                 <div className="flex items-start gap-3 mb-4">
-                  <input type="checkbox" id="termsAgreed" checked={formData.termsAgreed} readOnly className="w-5 h-5 cursor-pointer mt-1" />
-                  <label htmlFor="termsAgreed" onClick={() => setShowTermsModal(true)} className="text-gray-700 cursor-pointer underline decoration-dotted hover:text-blue-600">
+                  <input type="checkbox" id="termsAgreed" checked={formData.termsAgreed} readOnly className="w-5 h-5 cursor-pointer mt-1 accent-[#0B2C4D]" />
+                  <label htmlFor="termsAgreed" onClick={() => setShowTermsModal(true)} className="text-gray-700 cursor-pointer underline decoration-dotted hover:text-[#1E5FA8]">
                     I agree to the Terms and Conditions and Privacy Policy
                   </label>
                 </div>
 
                 {error && <p className="text-red-600 font-medium mb-4">{error}</p>}
 
-                <button type="submit" disabled={!formData.termsAgreed || loading} className="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors">
+                <button type="submit" disabled={!formData.termsAgreed || loading} className="w-full sm:w-auto px-8 py-3 bg-[#0B2C4D] hover:bg-[#143A66] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors">
                   {loading ? "Submitting..." : "Submit"}
                 </button>
               </div>

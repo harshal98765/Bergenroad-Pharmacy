@@ -100,31 +100,31 @@ export default function SavingsCopayHelp() {
 const inputStyle =
   "w-full px-4 py-3 rounded-xl border-[1.5px] border-slate-300 bg-white " +
   "text-slate-900 placeholder-slate-400 " +
-  "focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-green-600 transition"
+  "focus:outline-none focus:ring-2 focus:ring-[#1E5FA8]/30 focus:border-[#1E5FA8] transition"
 
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-green-50 to-white px-4 py-14 md:py-20">
+    <section className="min-h-screen bg-gradient-to-b from-[#F5FAFF] via-[#EAF4FF] to-white px-4 py-14 md:py-20">
       <div className="max-w-3xl mx-auto">
 
         {/* ================= HEADER ================= */}
         <div className="text-center mb-12">
-          <h2 className="serif-heading text-4xl md:text-5xl font-bold text-green-900 mb-4">
+          <h2 className="serif-heading text-4xl md:text-5xl font-bold text-[#0B2C4D] mb-4">
             Savings & Copay Help
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 max-w-2xl mx-auto">
             We help review manufacturer savings cards, discount pricing, and prior authorization support when eligible.
           </p>
         </div>
 
         {/* ================= SUCCESS ================= */}
         {submitted ? (
-          <div className="bg-white border-2 border-green-200 rounded-3xl p-10 shadow-xl text-center space-y-6">
+          <div className="bg-white border-2 border-#D9ECFF rounded-3xl p-10 shadow-xl text-center space-y-6">
             <div className="flex justify-center">
-              <CheckCircle className="w-16 h-16 text-green-600" />
+              <CheckCircle className="w-16 h-16 text-[#1E5FA8]" />
             </div>
 
-            <h3 className="serif-heading text-3xl font-bold text-green-900">
+            <h3 className="serif-heading text-3xl font-bold text-[#0B2C4D]">
               Request Received
             </h3>
 
@@ -141,12 +141,12 @@ const inputStyle =
         /* ================= FORM ================= */
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-3xl shadow-2xl border-2 border-green-200 p-8 md:p-12 space-y-8"
+          className="bg-white rounded-3xl shadow-2xl border-2 border-#D9ECFF p-8 md:p-12 space-y-8"
         >
 
           {/* ===== PATIENT INFO ===== */}
           <div>
-            <h3 className="serif-heading text-2xl font-bold text-green-900 mb-4">
+            <h3 className="serif-heading text-2xl font-bold text-[#0B2C4D] mb-4">
               Patient Information
             </h3>
 
@@ -205,7 +205,7 @@ const inputStyle =
 
           {/* ===== MEDICATION INFO ===== */}
           <div>
-            <h3 className="serif-heading text-2xl font-bold text-green-900 mb-4">
+            <h3 className="serif-heading text-2xl font-bold text-[#0B2C4D] mb-4">
               Medication Details
             </h3>
 
@@ -228,7 +228,7 @@ const inputStyle =
 
           {/* ===== INSURANCE STATUS ===== */}
           <div>
-            <h3 className="serif-heading text-2xl font-bold text-green-900 mb-4">
+            <h3 className="serif-heading text-2xl font-bold text-[#0B2C4D] mb-4">
               Insurance Status
             </h3>
 
@@ -236,7 +236,7 @@ const inputStyle =
               {['Have insurance', 'No insurance', 'Not sure'].map((opt) => (
                 <label
                   key={opt}
-                  className="flex items-center gap-3 border-2 border-slate-200 rounded-xl px-4 py-4 cursor-pointer hover:border-green-400 transition"
+                  className="flex items-center gap-3 border-2 border-slate-200 rounded-xl px-4 py-4 cursor-pointer hover:border-[[#1E5FA8]] transition"
                 >
                   <input type="radio" name="insuranceStatus" value={opt} required />
                   <span className="font-medium text-slate-700">{opt}</span>
@@ -247,7 +247,7 @@ const inputStyle =
 
           {/* ===== COST QUESTION ===== */}
           <div>
-            <h3 className="serif-heading text-2xl font-bold text-green-900 mb-4">
+            <h3 className="serif-heading text-2xl font-bold text-[#0B2C4D] mb-4">
               Cost Experience
             </h3>
 
@@ -283,7 +283,7 @@ const inputStyle =
 
           {/* ===== OPTIONAL INFO ===== */}
           <div>
-            <h3 className="serif-heading text-2xl font-bold text-green-900 mb-4">
+            <h3 className="serif-heading text-2xl font-bold text-[#0B2C4D] mb-4">
               Optional Information
             </h3>
 
@@ -301,9 +301,9 @@ const inputStyle =
               />
             </div>
 
-            <label className="mt-5 flex items-center justify-center gap-3 border-2 border-dashed border-green-300 rounded-xl p-6 cursor-pointer hover:bg-green-50 transition">
-              <Upload className="w-6 h-6 text-green-600" />
-              <span className="text-green-700 font-medium">
+            <label className="mt-5 flex items-center justify-center gap-3 border-2 border-dashed border-[#CFE6FF] rounded-xl p-6 cursor-pointer hover:bg-[#F5FAFF] transition">
+              <Upload className="w-6 h-6 text-[#1E5FA8]" />
+              <span className="text-[#1E5FA8] font-medium">
                 Upload insurance card (optional)
               </span>
               <input type="file" name="insuranceCard" accept="image/*,.pdf" hidden />
@@ -311,13 +311,13 @@ const inputStyle =
           </div>
 
           {/* ===== CONSENT ===== */}
-          <label className="flex gap-3 text-sm text-slate-700 bg-green-50 p-5 rounded-xl cursor-pointer leading-relaxed">
+          <label className="flex gap-3 text-sm text-slate-700 bg-[#F5FAFF] p-5 rounded-xl cursor-pointer leading-relaxed">
   <input
     type="checkbox"
     name="consent"
     value="true"
     required
-    className="mt-1 accent-green-600"
+    className="mt-1 accent-[#1E5FA8]"
   />
 
   <span>
@@ -325,7 +325,7 @@ const inputStyle =
     <button
       type="button"
       onClick={() => setShowTerms(true)}
-      className="text-green-700 font-semibold underline hover:text-green-800"
+      className="text-[#1E5FA8] font-semibold underline hover:text-green-800"
     >
       Terms & Conditions
     </button>{" "}
@@ -342,7 +342,7 @@ const inputStyle =
 
       {/* HEADER */}
       <div className="flex justify-between items-center px-6 py-4 border-b">
-        <h2 className="text-xl font-bold text-green-900">
+        <h2 className="text-xl font-bold text-[#0B2C4D]">
           Life Care Pharmacy – Website Terms & Conditions
         </h2>
 
@@ -368,7 +368,7 @@ const inputStyle =
           agree, please do not use this website or submit any forms.
         </p>
 
-        <h3 className="font-semibold text-green-900">1. General Website Use</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">1. General Website Use</h3>
         <p>
           This website is operated by:
           <br />
@@ -379,59 +379,59 @@ const inputStyle =
           Fax: 201-210-8304
         </p>
 
-        <h3 className="font-semibold text-green-900">2. No Medical Advice Disclaimer</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">2. No Medical Advice Disclaimer</h3>
         <ul className="list-disc ml-5 space-y-1">
           <li>Does not constitute medical advice</li>
           <li>Does not establish a doctor–patient relationship</li>
           <li>Does not replace consultation with a licensed provider</li>
         </ul>
 
-        <h3 className="font-semibold text-green-900">3. Prescription Transfers</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">3. Prescription Transfers</h3>
         <ul className="list-disc ml-5 space-y-1">
           <li>Transfers are subject to state and federal law</li>
           <li>Controlled substances may not be transferable</li>
           <li>Submission does not guarantee completion</li>
         </ul>
 
-        <h3 className="font-semibold text-green-900">4. Medication Availability</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">4. Medication Availability</h3>
         <ul className="list-disc ml-5 space-y-1">
           <li>Inventory shown is not real-time</li>
           <li>Availability may change without notice</li>
           <li>No reservation is created by submission</li>
         </ul>
 
-        <h3 className="font-semibold text-green-900">5. Pricing Disclaimer</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">5. Pricing Disclaimer</h3>
         <p>
           Pricing and copay estimates are not guaranteed and depend on
           insurance adjudication and pharmacy verification.
         </p>
 
-        <h3 className="font-semibold text-green-900">6. HIPAA Compliance</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">6. HIPAA Compliance</h3>
         <p>
           Information submitted is protected in accordance with HIPAA
           regulations and used only for treatment, payment, and
           healthcare operations.
         </p>
 
-        <h3 className="font-semibold text-green-900">7. Electronic Communication Consent</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">7. Electronic Communication Consent</h3>
         <p>
           You consent to receive communications via phone, SMS, email,
           or voicemail regarding pharmacy services.
         </p>
 
-        <h3 className="font-semibold text-green-900">8. Limitation of Liability</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">8. Limitation of Liability</h3>
         <p>
           Life Care Pharmacy is not liable for delays, shortages,
           insurance denials, or third-party system failures.
         </p>
 
-        <h3 className="font-semibold text-green-900">9. Age Requirement</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">9. Age Requirement</h3>
         <p>
           You confirm that you are at least 18 years old or an authorized
           representative.
         </p>
 
-        <h3 className="font-semibold text-green-900">10. Changes to Terms</h3>
+        <h3 className="font-semibold text-[#0B2C4D]">10. Changes to Terms</h3>
         <p>
           These Terms may be updated at any time. Continued use
           constitutes acceptance.
@@ -458,7 +458,7 @@ const inputStyle =
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-green-600 hover:bg-green-700 text-white py-5 rounded-2xl font-bold text-lg shadow-lg transition"
+            className="w-full bg-[#0B2C4D] hover:bg-[#143A66] text-white py-5 rounded-2xl font-bold text-lg shadow-lg transition"
           >
             {loading ? 'Submitting...' : 'Request Savings Review'}
           </button>
@@ -481,19 +481,19 @@ const inputStyle =
 
         {/* ===== TRUST STRIP ===== */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="bg-white rounded-xl p-6 border border-green-100 shadow-sm">
-            <DollarSign className="mx-auto text-green-600 mb-2" />
-            <p className="font-semibold text-green-900">Copay Card Review</p>
+          <div className="bg-white rounded-xl p-6 border border-[#EAF4FF] shadow-sm">
+            <DollarSign className="mx-auto text-[#1E5FA8] mb-2" />
+            <p className="font-semibold text-[#0B2C4D]">Copay Card Review</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border border-green-100 shadow-sm">
-            <ShieldCheck className="mx-auto text-green-600 mb-2" />
-            <p className="font-semibold text-green-900">Insurance Guidance</p>
+          <div className="bg-white rounded-xl p-6 border border-[#EAF4FF] shadow-sm">
+            <ShieldCheck className="mx-auto text-[#1E5FA8] mb-2" />
+            <p className="font-semibold text-[#0B2C4D]">Insurance Guidance</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border border-green-100 shadow-sm">
-            <CheckCircle className="mx-auto text-green-600 mb-2" />
-            <p className="font-semibold text-green-900">Prior Auth Support</p>
+          <div className="bg-white rounded-xl p-6 border border-[#EAF4FF] shadow-sm">
+            <CheckCircle className="mx-auto text-[#1E5FA8] mb-2" />
+            <p className="font-semibold text-[#0B2C4D]">Prior Auth Support</p>
           </div>
         </div>
 

@@ -17,26 +17,29 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-primary text-primary-foreground">
+      <footer className="bg-[#0B2C4D] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 py-16">
 
             <div>
-              <Image
-                src="/logo.png"
-                alt="DrugDropRx Logo"
-                width={180}
-                height={60}
-                className="mb-4 object-contain"
-              />
-              <p className="text-primary-foreground/80 mb-4">
+              <div className="-mt-35 object-contain -ml-7">
+  <Image
+    src="/logo.png"
+    alt="DrugDropRx Logo"
+    width={180}
+    height={60}
+    className="-mb-35 object-contain"
+  />
+</div>
+
+              <p className="text-white/80 mb-4">
                 Your trusted pharmacy partner for secure, reliable prescription services.
               </p>
             </div>
 
             <div>
-              <h4 className="font-bold text-lg mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-primary-foreground/80">
+              <h4 className="font-bold text-lg mb-4 text-white">Quick Links</h4>
+              <ul className="space-y-2 text-white/80">
                 <li>
                   <Link href="#home" className="hover:text-primary-foreground transition">
                     Home
@@ -125,9 +128,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="border-t border-primary-foreground/20"></div>
+          <div className="border-t border-white/20"></div>
 
-          <div className="py-8 flex flex-col sm:flex-row justify-between items-center text-primary-foreground/80 text-sm">
+          <div className="py-8 flex flex-col sm:flex-row justify-between items-center text-white/80 text-sm">
   <p>© {currentYear} LifeCarePharmacy. All rights reserved.</p>
 
   <p className="flex items-center gap-1 mt-4 sm:mt-0">
@@ -136,10 +139,10 @@ export default function Footer() {
       href="https://drugdroprx.com/"
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center text-secondary hover:scale-110 transition-transform"
+      className="inline-flex items-center text-[#1E5FA8] hover:scale-110 transition-transform"
       aria-label="Visit DrugDropRx website"
     >
-      <Heart size={16} className="text-secondary cursor-pointer" />
+      <Heart size={16} className="text-[#1E5FA8] cursor-pointer" />
     </a>
     {" "}for your health
   </p>
@@ -251,7 +254,7 @@ export default function Footer() {
             <div className="px-6 py-4 border-t text-right">
               <button
                 onClick={() => setShowLegalModal(false)}
-                className="px-6 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+                className="px-6 py-2 rounded-lg bg-[#0B2C4D] text-white font-semibold hover:bg-[#143A66] transition"
               >
                 Close
               </button>

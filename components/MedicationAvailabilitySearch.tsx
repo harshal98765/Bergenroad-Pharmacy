@@ -121,22 +121,22 @@ export default function MedicationAvailabilitySearch() {
   
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-green-50 to-white px-4 py-12 md:py-16">
+    <section className="min-h-screen bg-gradient-to-t from-[#D6EBFF] via-[#F0F7FF] to-white px-4 py-12 md:py-16">
       <div className="max-w-2xl mx-auto">
 
         {/* HEADER */}
         <div className="text-center mb-12">
-          <h2 className="serif-heading text-4xl md:text-5xl font-bold text-green-900 mb-4">
+          <h2 className="serif-heading text-4xl md:text-5xl font-bold text-[#0B2C4D] mb-4">
             Find Your Medication
           </h2>
           <p className="text-base md:text-lg text-slate-600">
-            Check availability of your prescription medication at Life Care Pharmacy
+            Check availability of your prescription medication at BergenRoad Pharmacy
           </p>
         </div>
 
         {/* SEARCH BAR */}
         <div className="relative mb-6">
-          <div className="absolute left-5 top-1/2 transform -translate-y-1/2 text-green-600">
+          <div className="absolute left-5 top-1/2 transform -translate-y-1/2 text-[#1E5FA8]">
             <Search className="w-6 h-6" />
           </div>
 
@@ -148,23 +148,23 @@ export default function MedicationAvailabilitySearch() {
               setSubmitted(false)
             }}
             placeholder="Search medication name..."
-            className="w-full pl-14 pr-6 py-4 md:py-5 text-lg md:text-xl border-2 border-green-300 rounded-2xl focus:ring-4 focus:ring-green-400 focus:border-green-600 outline-none transition-all duration-200 shadow-lg"
+            className="w-full pl-14 pr-6 py-4 md:py-5 text-lg md:text-xl border-2 border-blue-300 rounded-2xl focus:ring-4 focus:ring-blue-400 focus:border-[#1E5FA8] outline-none transition-all duration-200 shadow-lg"
           />
 
           {/* SUGGESTIONS */}
           {filtered.length > 0 && !selectedMedication && (
-            <div className="absolute z-30 bg-white w-full mt-2 rounded-2xl border-2 border-green-200 shadow-xl max-h-80 overflow-y-auto">
+            <div className="absolute z-30 bg-white w-full mt-2 rounded-2xl border-2 border-blue-200 shadow-xl max-h-80 overflow-y-auto">
               {filtered.map((med, idx) => (
                 <button
                   key={`${med}-${idx}`}
                   onClick={() => selectMedication(med)}
-                  className={`w-full text-left px-5 py-4 text-base font-medium hover:bg-green-100 transition-colors duration-150 ${
-                    idx !== filtered.length - 1 ? 'border-b border-green-100' : ''
+                  className={`w-full text-left px-5 py-4 text-base font-medium hover:bg-blue-100 transition-colors duration-150 ${
+                    idx !== filtered.length - 1 ? 'border-b border-blue-100' : ''
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <Search className="w-5 h-5 text-green-500" />
-                    <span className="text-green-900">{med}</span>
+                    <Search className="w-5 h-5 text-blue-500" />
+                    <span className="text-[#0B2C4D]">{med}</span>
                   </div>
                 </button>
               ))}
@@ -175,9 +175,9 @@ export default function MedicationAvailabilitySearch() {
         {/* THREE INFO BOXES — RESTORED */}
         {!submitted && !selectedMedication && (
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl p-6 border border-green-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-green-600 mb-3 text-3xl">✓</div>
-              <h3 className="text-lg font-bold text-green-900 mb-2">
+            <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-[#1E5FA8] mb-3 text-3xl">✓</div>
+              <h3 className="text-lg font-bold text-[#0B2C4D] mb-2">
                 Quick Search
               </h3>
               <p className="text-sm text-slate-600">
@@ -185,9 +185,9 @@ export default function MedicationAvailabilitySearch() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-green-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-green-600 mb-3 text-3xl">📞</div>
-              <h3 className="text-lg font-bold text-green-900 mb-2">
+            <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-[#1E5FA8] mb-3 text-3xl">📞</div>
+              <h3 className="text-lg font-bold text-[#0B2C4D] mb-2">
                 Easy Confirmation
               </h3>
               <p className="text-sm text-slate-600">
@@ -195,9 +195,9 @@ export default function MedicationAvailabilitySearch() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-green-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-green-600 mb-3 text-3xl">⏱️</div>
-              <h3 className="text-lg font-bold text-green-900 mb-2">
+            <div className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-[#1E5FA8] mb-3 text-3xl">⏱️</div>
+              <h3 className="text-lg font-bold text-[#0B2C4D] mb-2">
                 Quick Response
               </h3>
               <p className="text-sm text-slate-600">
@@ -211,17 +211,17 @@ export default function MedicationAvailabilitySearch() {
         {submitted && selectedMedication && (
           <div className="mt-12 bg-white border-2 border-green-200 rounded-3xl p-8 shadow-xl space-y-6">
             <div className="flex justify-center">
-              <span className="bg-green-100 text-green-800 px-6 py-2.5 rounded-full text-base font-bold">
+              <span className="bg-blue-100 text-[#0B2C4D] px-6 py-2.5 rounded-full text-base font-bold">
                 ✔ Typically Available
               </span>
             </div>
 
             <div className="text-center space-y-3">
-              <p className="text-xl font-bold text-green-900">
+              <p className="text-xl font-bold text-[#0B2C4D]">
                 {selectedMedication}
               </p>
               <p className="text-base text-slate-700 leading-relaxed">
-                This medication is typically stocked or sourced by Life Care Pharmacy. Availability can change in real time.
+                This medication is typically stocked or sourced by BergenRoad Pharmacy. Availability can change in real time.
               </p>
             </div>
 
@@ -233,11 +233,11 @@ export default function MedicationAvailabilitySearch() {
 
             <div className="flex justify-center pt-2">
               <a
-                href="tel:2014251187"
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 shadow-lg"
+                href="tel:+1 201-434-8062"
+                className="bg-[#0B2C4D] hover:bg-[#143A66] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 shadow-lg"
               >
                 <Phone className="w-6 h-6" />
-                Call Pharmacy: (201) 425-1187
+                Call Pharmacy: 201-434-8062
               </a>
             </div>
 
@@ -262,12 +262,12 @@ export default function MedicationAvailabilitySearch() {
               </button>
 
               <div className="mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#0B2C4D] mb-2">
                   Verify Your Information
                 </h3>
                 <p className="text-slate-600 text-base">
                   We will contact you regarding{' '}
-                  <span className="font-semibold text-green-700">
+                  <span className="font-semibold text-[#1E5FA8]">
                     {selectedMedication}
                   </span>
                 </p>
@@ -341,15 +341,15 @@ export default function MedicationAvailabilitySearch() {
                   className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg"
                 />
 
-                <label className="flex gap-3 text-sm text-slate-700 p-4 bg-green-50 rounded-lg">
+                <label className="flex gap-3 text-sm text-slate-700 p-4 bg-blue-50 rounded-lg">
   <input
     type="checkbox"
     required
-    className="w-5 h-5 accent-green-600 mt-0.5"
+    className="w-5 h-5 accent-[#1E5FA8] mt-0.5"
   />
 
   <span className="leading-relaxed">
-    I authorize Life Care Pharmacy to contact me regarding this request.
+    I authorize BergenRoad Pharmacy to contact me regarding this request.
     {" "}
     <button
       type="button"
@@ -382,7 +382,7 @@ export default function MedicationAvailabilitySearch() {
         </p>
 
         <p>
-          You authorize Life Care Pharmacy to contact you via phone, text
+          You authorize BergenRoad Pharmacy to contact you via phone, text
           message, or email regarding your prescription inquiry, medication
           availability, insurance verification, or savings options.
         </p>
@@ -404,7 +404,7 @@ export default function MedicationAvailabilitySearch() {
       <div className="pt-4 text-right">
         <button
           onClick={() => setShowTerms(false)}
-          className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold"
+          className="bg-[#0B2C4D] hover:bg-[#143A66] text-white px-6 py-2 rounded-lg font-semibold"
         >
           I Understand
         </button>
@@ -421,7 +421,7 @@ export default function MedicationAvailabilitySearch() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-bold shadow-lg"
+                  className="w-full bg-[#0B2C4D] hover:bg-[#143A66] text-white py-4 rounded-xl font-bold shadow-lg"
                 >
                   {loading ? 'Submitting...' : 'Check Availability'}
                 </button>

@@ -9,24 +9,24 @@ export default function WhatWeOfferSection() {
       image: '/medicine01.png',
       title: 'Precision Compounding',
       description:
-        'Personalized medications prepared to meet your unique needs, including customized dosages and allergen-free formulations.',
-      color: 'from-emerald-500 to-teal-600',
+        'Custom-formulated medications crafted specifically for your health requirements and sensitivities',
+      color: 'from-[#0B2C4D] to-[#143A66]',
       icon: Pill,
     },
     {
       image: '/checkup01.png',
       title: 'Generic Plan',
       description:
-        'Affordable high-quality generic medication plans designed to lower healthcare costs.',
-      color: 'from-green-500 to-emerald-600',
+        'Cost-effective generic alternatives without compromising on quality or efficay for common conditions',
+      color: 'from-[#1E5FA8] to-[#2F80ED]',
       icon: ClipboardList,
     },
     {
       image: '/vaccin01.png',
       title: 'Care Support',
       description:
-        'Ongoing support for diabetes, BP, thyroid and chronic condition management.',
-      color: 'from-teal-500 to-cyan-600',
+        'Expert guidance for managing diabetes, hypertension, thyroid disorders, and other long-term conditions',
+      color: 'from-[#3B82F6] to-[#0EA5E9]',
       icon: HeartPulse,
     },
   ]
@@ -48,13 +48,13 @@ export default function WhatWeOfferSection() {
         <div className="text-center mb-12">
           <h2 className="hero-title serif-heading text-foreground leading-tight">
             What We{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B2C4D] to-[#1E5FA8]">
               Offer
             </span>
           </h2>
 
           <p className="text-muted-foreground mt-4 text-lg">
-            Comprehensive pharmacy services tailored for you
+            Full-service pharmacy solutions built for your needs
           </p>
         </div>
 
@@ -111,14 +111,14 @@ export default function WhatWeOfferSection() {
 
           <button
             onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 shadow-md hover:bg-blue-50 rounded-full p-2"
           >
             <ArrowLeft />
           </button>
 
           <button
             onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 shadow-md hover:bg-blue-50 rounded-full p-2"
           >
             <ArrowRight />
           </button>
@@ -200,7 +200,7 @@ export default function WhatWeOfferSection() {
               key={i}
               onClick={() => setActive(i)}
               className={`h-2 rounded-full transition-all
-                ${i === active ? 'bg-primary w-6' : 'bg-gray-300 w-2'}
+                ${i === active ? 'bg-[#0B2C4D] w-6' : 'bg-blue-300 w-2'}
               `}
             />
           ))}

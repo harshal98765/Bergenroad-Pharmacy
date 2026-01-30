@@ -81,8 +81,7 @@ export default function ContactForm() {
     <section id="contact" className="relative py-20 overflow-hidden">
 
       {/* BACKGROUND */}
-      <div className="absolute inset-0 bg-gradient-to-r from-green-50/90 via-green-50/80 to-green-50/70" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-100/20 to-emerald-200/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-gray-100" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -92,20 +91,21 @@ export default function ContactForm() {
 
             <h2 className="hero-title serif-heading text-foreground leading-tight mb-8">
               Get In{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B2C4D] to-[#1E5FA8]">
                 Touch
               </span>
             </h2>
 
             <div className="space-y-8">
+
               {/* PHONE */}
               <div className="flex items-start gap-4">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Phone className="text-primary" size={24} />
+                <div className="h-12 w-12 rounded-lg bg-[#0B2C4D]/10 flex items-center justify-center">
+                  <Phone className="text-[#0B2C4D]" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Phone</h3>
-                  <p className="text-muted-foreground">+1 201-425-1187</p>
+                  <p className="text-muted-foreground">+1 201-434-8062</p>
                   <p className="text-sm text-muted-foreground">
                     Available on extended hours
                   </p>
@@ -114,13 +114,13 @@ export default function ContactForm() {
 
               {/* EMAIL */}
               <div className="flex items-start gap-4">
-                <div className="h-12 w-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-                  <Mail className="text-secondary" size={24} />
+                <div className="h-12 w-12 rounded-lg bg-[#1E5FA8]/10 flex items-center justify-center">
+                  <Mail className="text-[#1E5FA8]" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Email</h3>
                   <p className="text-muted-foreground">
-                    Lifecarepharmacyllc@gmail.com
+                    Bergenroadpharmacyllc@gmail.com
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Response within 2 hours
@@ -130,40 +130,41 @@ export default function ContactForm() {
 
               {/* LOCATION */}
               <div className="flex items-start gap-4">
-                <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                  <MapPin className="text-accent" size={24} />
+                <div className="h-12 w-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                  <MapPin className="text-blue-600" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">
                     Location
                   </h3>
                   <p className="text-muted-foreground">
-                    3199 John F. Kennedy Blvd
+                    239 Old Bergen Rd, 
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Jersey City, NJ 07306
+                    Jersey City, NJ 07305, United States
                   </p>
                 </div>
               </div>
 
-              {/* ✅ FAQ BUTTON */}
+              {/* FAQ BUTTON */}
               <Link href="/faqs">
-                <button className="mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-primary-foreground bg-gradient-to-r from-primary to-secondary shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <button className="mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-[#0B2C4D] to-[#1E5FA8] shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                   <HelpCircle className="w-5 h-5" />
                   Visit Our FAQs
                 </button>
               </Link>
+
             </div>
           </div>
 
-          {/* CONTACT FORM */}
+          {/* ================= CONTACT FORM ================= */}
           <div className="animate-slideInUp" style={{ animationDelay: "0.2s" }}>
-            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-border">
+            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
 
               {submitted ? (
                 <div className="animate-fadeInScale text-center py-12">
-                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-blue-700/20 mb-6">
-                    <Mail className="text-blue-700" size={32} />
+                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-[#1E5FA8]/20 mb-6">
+                    <Mail className="text-[#1E5FA8]" size={32} />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">
                     Message Sent!
@@ -183,39 +184,35 @@ export default function ContactForm() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input
-                      type="text"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder="First Name"
-                      className="px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-green-900 focus:ring-2 focus:ring-green-900/20 transition-all"
+                      className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0B2C4D] focus:ring-2 focus:ring-[#0B2C4D]/20 transition-all"
                     />
                     <input
-                      type="text"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder="Last Name"
-                      className="px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-green-900 focus:ring-2 focus:ring-green-900/20 transition-all"
+                      className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0B2C4D] focus:ring-2 focus:ring-[#0B2C4D]/20 transition-all"
                     />
                   </div>
 
                   <input
-                    type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Email Address"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-green-900 focus:ring-2 focus:ring-green-900/20 transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#1E5FA8] focus:ring-2 focus:ring-[#1E5FA8]/20 transition-all"
                   />
 
                   <input
-                    type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Phone Number"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-green-900 focus:ring-2 focus:ring-green-900/20 transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#1E5FA8] focus:ring-2 focus:ring-[#1E5FA8]/20 transition-all"
                   />
 
                   <textarea
@@ -224,31 +221,17 @@ export default function ContactForm() {
                     onChange={handleChange}
                     placeholder="Your Message"
                     rows={5}
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:border-green-900 focus:ring-2 focus:ring-green-900/20 transition-all resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#0B2C4D] focus:ring-2 focus:ring-[#0B2C4D]/20 transition-all resize-none"
                   />
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="
-                      w-full
-                      bg-green-900
-                      text-white
-                      font-bold
-                      py-3
-                      px-6
-                      rounded-lg
-                      hover:bg-green-800
-                      transition-all
-                      duration-300
-                      transform
-                      hover:scale-105
-                      active:scale-95
-                      disabled:opacity-60
-                    "
+                    className="w-full bg-[#0B2C4D] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#143A66] transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-60"
                   >
                     {loading ? "Sending..." : "Send Message"}
                   </button>
+
                 </form>
               )}
 

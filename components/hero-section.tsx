@@ -76,23 +76,27 @@ export default function HeroSection() {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-green-50/90 via-green-50/80 to-green-50/70" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-100/20 to-emerald-200/40" />
+      {/* Improved gradient overlay with smoother color blending */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#D6EBFF]/95 via-white/85 to-[#E8F4FF]/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 via-white/20 to-blue-100/40" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#D6EBFF]/60 via-transparent to-white/50" />
 
-      <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/8 rounded-full blur-3xl" />
+      {/* Floating blur elements for smooth transitions */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-400/15 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/30 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* RIGHT FORM – FIRST ON MOBILE */}
           <div className="order-1 lg:order-2 animate-slideInRight">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-border/50 backdrop-blur-sm hover:shadow-3xl transition-shadow duration-500">
+            <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-10 border border-blue-100/50 hover:shadow-3xl transition-shadow duration-500">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold serif-heading text-foreground mb-3">
                   Submit Your RX
                 </h2>
-                <div className="w-12 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" />
+                <div className="w-12 h-1 bg-gradient-to-r from-[#0B2C4D] to-[#1E5FA8] rounded-full" />
               </div>
 
               {submitted ? (
@@ -146,7 +150,7 @@ export default function HeroSection() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-bold py-5 px-6 rounded-2xl hover:shadow-lg hover:-translate-y-1 active:translate-y-0 transition-all duration-300 text-lg disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full bg-gradient-to-r from-[#0B2C4D] to-[#1E5FA8] text-primary-foreground font-bold py-5 px-6 rounded-2xl hover:shadow-lg hover:-translate-y-1 active:translate-y-0 transition-all duration-300 text-lg disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {loading ? "Submitting..." : "Request a Refill"}
                   </button>
@@ -166,28 +170,28 @@ export default function HeroSection() {
 
           {/* LEFT CONTENT – SECOND ON MOBILE */}
           <div className="order-2 lg:order-1 animate-slideInLeft space-y-8">
-            <div className="inline-flex items-center gap-2 bg-accent/15 px-4 py-2 rounded-full border border-accent/30">
-              <Heart className="w-4 h-4 text-accent" />
-              <span className="text-sm font-medium text-accent">
+            <div className="inline-flex items-center gap-2 bg-blue-100/80 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200/60">
+              <Heart className="w-4 h-4 text-[#1E5FA8]" />
+              <span className="text-sm font-medium text-[#1E5FA8]">
                 Trusted Healthcare Partner
               </span>
             </div>
 
             <h1 className="hero-title serif-heading text-foreground leading-tight">
-              Your Health,
+              Your Wellness,
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                Our Priority
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B2C4D] to-[#1E5FA8]">
+                Our Mission
               </span>
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed font-light max-w-md">
-              Fast, secure, and professional pharmacy services in Jersey City, NJ. Submit your prescription online for care and precise fulfillment.
+              Your neighborhood pharmacy in Jersey City, NJ. Upload prescriptions online for secure, accurate, and caring service.
             </p>
 
             <div className="space-y-4 pt-4">
               <div className="flex items-start gap-4 animate-slideInUp">
-                <div className="mt-1 p-2 bg-primary/10 rounded-lg">
+                <div className="mt-1 p-2 bg-[#0B2C4D]/10 rounded-lg">
                   <Lock className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -197,7 +201,7 @@ export default function HeroSection() {
               </div>
 
               <div className="flex items-start gap-4 animate-slideInUp">
-                <div className="mt-1 p-2 bg-secondary/10 rounded-lg">
+                <div className="mt-1 p-2 bg-blue-500/10 rounded-lg">
                   <Zap className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
@@ -207,7 +211,7 @@ export default function HeroSection() {
               </div>
 
               <div className="flex items-start gap-4 animate-slideInUp">
-                <div className="mt-1 p-2 bg-accent/10 rounded-lg">
+                <div className="mt-1 p-2 bg-blue-400/10 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-accent" />
                 </div>
                 <div>
@@ -217,7 +221,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-
+              
         </div>
       </div>
     </section>
