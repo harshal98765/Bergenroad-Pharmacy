@@ -21,13 +21,8 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-<<<<<<< HEAD
     default: "Bergen Road Pharmacy | Jersey City, NJ",
     template: "%s | Bergen Road Pharmacy",
-=======
-    default: "Bergen Road Pharmacy",
-    template: "%s | Life Care Pharmacy",
->>>>>>> 0d95dcf9a28bb543cf95a0f4dc061ea57d2b01ea
   },
 
   description:
@@ -41,7 +36,7 @@ export const metadata: Metadata = {
     title: "Bergen Road Pharmacy | Jersey City, NJ",
     description:
       "Your neighborhood pharmacy in Jersey City. Free delivery, immunizations, and personalized care.",
-    url: "https://bergenroadpharmacy.com",
+   url: "https://bergenroadpharmacy.com",
     siteName: "Bergen Road Pharmacy",
     type: "website",
     images: [

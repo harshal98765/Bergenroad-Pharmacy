@@ -17,14 +17,14 @@ const faqSections = [
     icon: Pill,
     faqs: [
       {
-        q: "How do I fill my prescriptions at Life Care Pharmacy?",
+        q: "How do I fill my prescriptions at Bergen Road Pharmacy?",
         a: `You can fill your prescriptions in several ways:
-• Ask your doctor to send prescriptions directly to Life Care Pharmacy
+• Ask your doctor to send prescriptions directly to Bergen Road Pharmacy
 • Request a transfer from your current pharmacy
 • Contact our pharmacy and we will coordinate the transfer for you`,
       },
       {
-        q: "Is there a fee to sign up or use Life Care Pharmacy?",
+        q: "Is there a fee to sign up or use Bergen Road Pharmacy?",
         a: "No. There is no fee to sign up or use our pharmacy services. We welcome patients with or without insurance, and delivery is available at no additional charge for eligible prescriptions.",
       },
     ],
@@ -137,8 +137,14 @@ const faqSections = [
     icon: Phone,
     faqs: [
       {
-        q: "How can I contact Life Care Pharmacy?",
-        a: "You may call us, visit our website, or stop by the pharmacy. Our team is always happy to assist you.",
+        q: "How can I contact Bergen Road Pharmacy?",
+        a: `You may contact us using the details below:
+
+Bergen Road Pharmacy  
+239 Old Bergen Rd  
+Jersey City, NJ 07305, United States  
+
+📞 Phone: +1 201-434-8062`,
       },
     ],
   },
@@ -151,11 +157,10 @@ export default function FaqSection() {
     <section className="py-24 bg-gradient-to-b from-background to-white">
       <div className="max-w-5xl mx-auto px-4">
 
-        {/* HEADER */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="hero-title  leading-tight">
+          <h2 className="hero-title leading-tight">
             Frequently Asked{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B2C4D] via-[#143A66] to-[#1E5FA8]">
               Questions
             </span>
           </h2>
@@ -166,14 +171,12 @@ export default function FaqSection() {
           </p>
         </div>
 
-        {/* FAQ LIST */}
         <div className="space-y-10">
           {faqSections.map((section, idx) => {
             const Icon = section.icon
 
             return (
               <div key={idx}>
-                {/* CATEGORY HEADER */}
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Icon className="w-5 h-5 text-primary" />
@@ -183,7 +186,6 @@ export default function FaqSection() {
                   </h3>
                 </div>
 
-                {/* QUESTIONS */}
                 <div className="space-y-3">
                   {section.faqs.map((faq, i) => {
                     const key = `${idx}-${i}`

@@ -131,7 +131,7 @@ export default function Footer() {
           <div className="border-t border-white/20"></div>
 
           <div className="py-8 flex flex-col sm:flex-row justify-between items-center text-white/80 text-sm">
-  <p>© {currentYear} LifeCarePharmacy. All rights reserved.</p>
+  <p>© {currentYear} Bergen Road Pharmacy. All rights reserved.</p>
 
   <p className="flex items-center gap-1 mt-4 sm:mt-0">
     Made with{" "}
@@ -230,20 +230,20 @@ export default function Footer() {
 
               {legalType === "contact" && (
                 <>
-                  <p className="font-semibold text-gray-900">Life Care Pharmacy</p>
+                  <p className="font-semibold text-gray-900">Bergen Road Pharmacy</p>
                   <p>
                     Phone:{" "}
                     <a href="tel:+12014251187" className="text-blue-600 underline">
-                      +1 201-425-1187
+                      +1 201-434-8062
                     </a>
                   </p>
                   <p>
                     Email:{" "}
                     <a
-                      href="mailto:Lifecarepharmacyllc@gmail.com"
+                      href="mailto:Bergenroadpharmacyllc@gmail.com"
                       className="text-blue-600 underline"
                     >
-                      Lifecarepharmacyllc@gmail.com
+                      Bergenroadpharmacyllc@gmail.com
                     </a>
                   </p>
                 </>

@@ -88,26 +88,28 @@ export default function MapsSection() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white">
 
                 {/* ✅ UPDATED MAP DISPLAY */}
-                <iframe
-                  src="https://www.google.com/maps?q=Life+Care+Pharmacy+%26+Compounding+Jersey+City+NJ&output=embed"
-                  width="100%"
-                  height="400"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-2xl"
-                />
+                {/* ✅ UPDATED MAP DISPLAY — NEW LOCATION */}
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.600911914276!2d-74.071672!3d40.726576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b7b0c6a6d9%3A0x5c8c5b2f5d6c9f4b!2sLife%20Care%20Pharmacy%20%26%20Compounding!5e0!3m2!1sen!2sus!4v1706692000000"
+  width="100%"
+  height="420"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  className="rounded-2xl"
+/>
 
-                {/* Overlay Badge */}
-                <div className="absolute bottom-6 left-6 bg-white rounded-xl px-6 py-4 shadow-lg border border-gray-200">
-                  <p className="text-2xl font-bold serif-heading text-[#0B2C4D]">
-                    Life Care Pharmacy
-                  </p>
-                  <p className="text-xs text-gray-500 font-medium">
-                    Primary Pharmacy Location
-                  </p>
-                </div>
+{/* ✅ LOCATION DISPLAY EXACTLY LIKE IMAGE */}
+<div className="absolute bottom-6 left-6 bg-white rounded-xl px-6 py-4 shadow-lg border border-gray-200">
+  <p className="text-2xl font-bold serif-heading text-[#0B2C4D]">
+    Bergen Road Pharmacy
+  </p>
+  <p className="text-xs text-gray-500 font-medium">
+    Primary Pharmacy Location
+  </p>
+</div>
+
 
               </div>
             </div>
