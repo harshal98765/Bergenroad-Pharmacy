@@ -102,7 +102,7 @@ export default function MapsSection() {
                 {/* Overlay Badge */}
                 <div className="absolute bottom-6 left-6 bg-white rounded-xl px-6 py-4 shadow-lg border border-gray-200">
                   <p className="text-2xl font-bold serif-heading text-[#0B2C4D]">
-                    Life Care Pharmacy
+                    Bergenroad Pharmacy
                   </p>
                   <p className="text-xs text-gray-500 font-medium">
                     Primary Pharmacy Location
