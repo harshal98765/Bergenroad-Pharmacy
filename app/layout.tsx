@@ -21,8 +21,13 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
+<<<<<<< HEAD
     default: "Bergen Road Pharmacy | Jersey City, NJ",
     template: "%s | Bergen Road Pharmacy",
+=======
+    default: "Bergen Road Pharmacy",
+    template: "%s | Life Care Pharmacy",
+>>>>>>> 0d95dcf9a28bb543cf95a0f4dc061ea57d2b01ea
   },
 
   description:
@@ -59,9 +64,9 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "logo.ico" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "16x16", type: "image/png" },
     ],
     apple: "/apple-touch-icon.png",
   },
