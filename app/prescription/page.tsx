@@ -180,7 +180,41 @@ export default function TransferPrescription() {
                     <input type="tel" name="phone" placeholder="Phone" value={formData.phone} onChange={handleInputChange} className="flex-1 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" required />
                   </div>
 
-                  <input type="date" name="birthday" value={formData.birthday} onChange={handleInputChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E5FA8] focus:border-[#1E5FA8]" required />
+                  <div className="relative w-[263px] sm:w-[260px] md:w-full">
+
+  {/* Mobile-only fake placeholder */}
+  <span
+    id="birthday-label"
+    className="
+      absolute left-4 top-1/2 -translate-y-1/2
+      text-gray-400 text-sm
+      pointer-events-none
+      md:hidden
+    "
+  >
+    Date of Birth
+  </span>
+
+  <input
+    type="date"
+    name="birthday"
+    value={formData.birthday}
+    required
+    onChange={(e) => {
+      handleInputChange(e)
+      const label = document.getElementById('birthday-label')
+      if (label) label.style.display = e.target.value ? 'none' : 'block'
+    }}
+    className="
+      w-full px-4 py-3
+      border border-gray-300 rounded-lg
+      focus:outline-none focus:ring-2
+      focus:ring-[#1E5FA8] focus:border-[#1E5FA8]
+    "
+  />
+</div>
+
+
                 </div>
               </div>
 

@@ -292,3 +292,19 @@ input[type="date"]:not([value=""]) + span {
   opacity: 0;
 }
 
+/* ===============================
+   ALERT SLIDING ANIMATION
+   =============================== */
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 15s linear infinite;
+}

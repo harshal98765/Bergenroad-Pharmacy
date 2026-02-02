@@ -20,45 +20,59 @@ export default function Navigation() {
   return (
     <>
       {/* ================= TOP ALERT ================= */}
-      {showAlert && (
-        <div className="fixed top-0 w-full z-41
-          bg-gradient-to-r
-          from-[#D6EBFF]
-          via-[#F0F7FF]
-          to-[#D6EBFF]
-          text-[#0B2C4D]"
+      {/* ================= TOP ALERT ================= */}
+{showAlert && (
+  <div
+    className="
+      fixed top-0 w-full z-41
+      bg-gradient-to-r
+      from-[#D6EBFF]
+      via-[#F0F7FF]
+      to-[#D6EBFF]
+      text-[#0B2C4D]
+    "
+  >
+    <div className="max-w-7xl mx-auto px-3 py-2 flex items-center justify-center relative">
+
+      <p
+    className="
+      inline-block
+      whitespace-nowrap
+      text-[13px]
+      md:text-base
+      font-semibold
+      animate-slide-left
+    "
+  >
+        Horizon NJ Health members welcome •{" "}
+        <a
+          href="tel:+12014348062"
+          className="underline font-bold hover:text-blue-700"
         >
-          <div className="max-w-7xl mx-auto px-3 py-2 flex items-center justify-center relative">
+          Call 201-434-8062
+        </a>
+      </p>
 
-            <p className="
-              text-[13px] 
-              md:text-base 
-              font-semibold 
-              text-center 
-              whitespace-nowrap 
-              overflow-hidden 
-              text-ellipsis
-            ">
-              Horizon NJ Health members welcome •{" "}
-              <a
-                href="tel:+12014348062"
-                className="underline font-bold hover:text-blue-700"
-              >
-                Call 201-434-8062
-              </a>
-            </p>
+      {/* ❌ CLOSE BUTTON — DESKTOP ONLY */}
+      <button
+        onClick={() => setShowAlert(false)}
+        className="
+          hidden md:flex
+          absolute right-4
+          hover:bg-black/10
+          rounded-md
+          p-1
+          transition
+        "
+        aria-label="Close alert"
+      >
+        <X size={20} />
+      </button>
 
-            <button
-              onClick={() => setShowAlert(false)}
-              className="absolute right-4 hover:bg-black/10 rounded-md p-1 transition"
-              aria-label="Close alert"
-            >
-              <X size={20} />
-            </button>
+    </div>
+  </div>
+)}
 
-          </div>
-        </div>
-      )}
 
       {/* ================= NAV BAR ================= */}
       <nav
@@ -79,16 +93,26 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-20">
 
             {/* Logo */}
-            <div className="flex items-center h-20">
-  <Image
-    src="/logo.png"
-    alt="Life Care Pharmacy – Jersey City NJ"
-    width={220}
-    height={60}
-    priority
-    className="object-contain max-h-[370px] -translate-y-1 -translate-x-15"
-  />
+            {/* Logo */}
+<div className="flex items-center h-20">
+  <Link href="/" aria-label="Go to homepage">
+    <Image
+      src="/logo.png"
+      alt="Life Care Pharmacy – Jersey City NJ"
+      width={220}
+      height={60}
+      priority
+      className="
+        object-contain
+        max-h-[370px]
+        cursor-pointer
+        -translate-y-1
+        -translate-x-12
+      "
+    />
+  </Link>
 </div>
+
 
 
             {/* Desktop Nav */}

@@ -165,32 +165,34 @@ const inputStyle =
                 className={inputStyle}
               />
 
-              <div className="relative max-w-[295px] sm:max-w-[220px] md:max-w-full">
+              <div className="relative max-w-[260px] sm:max-w-[240px] md:max-w-full">
 
   {/* Mobile-only fake placeholder */}
-                <span
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 
-                            pointer-events-none text-sm 
-                            block md:hidden"
-                  id="dob-label"
-                >
-                  Date of Birth
-                </span>
+  <span
+    id="dob-label"
+    className="
+      absolute left-4 top-1/2 -translate-y-1/2
+      text-slate-400 text-sm
+      pointer-events-none
+      md:hidden
+    "
+  >
+    Date of Birth
+  </span>
 
-                <input
-                  type="date"
-                  name="dob"
-                  required
-                  onChange={(e) => {
-                    const label = document.getElementById('dob-label')
-                    if (label) label.style.display = e.target.value ? 'none' : 'block'
-                  }}
-                  className={`${inputStyle.replace(
-                    'w-full',
-                    ''
-                  )} ios-date w-[295px] sm:w-[220px] md:w-full`}
-                />
-              </div>
+  <input
+    type="date"
+    name="dob"
+    required
+    onChange={(e) => {
+      const label = document.getElementById('dob-label')
+      if (label) {
+        label.style.display = e.target.value ? 'none' : 'block'
+      }
+    }}
+    className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg ios-date"
+  />
+</div>
 
 
 
@@ -343,8 +345,9 @@ const inputStyle =
       {/* HEADER */}
       <div className="flex justify-between items-center px-6 py-4 border-b">
         <h2 className="text-xl font-bold text-[#0B2C4D]">
-          Life Care Pharmacy – Website Terms & Conditions
-        </h2>
+  Bergen Road Pharmacy – Website Terms & Conditions
+</h2>
+
 
         <button
           onClick={() => setShowTerms(false)}
@@ -363,21 +366,28 @@ const inputStyle =
         </p>
 
         <p>
-          By accessing or using this website (lifecarepharmacyrx.com),
+          By accessing or using this website (bergenroadpharmacy.com),
           you agree to the following Terms and Conditions. If you do not
           agree, please do not use this website or submit any forms.
         </p>
 
         <h3 className="font-semibold text-[#0B2C4D]">1. General Website Use</h3>
-        <p>
-          This website is operated by:
-          <br />
-          Life Care Pharmacy LLC<br />
-          3199 John F. Kennedy Blvd<br />
-          Jersey City, NJ 07306<br />
-          Phone: 201-425-1187<br />
-          Fax: 201-210-8304
-        </p>
+<p>
+  This website is operated by:
+  <br />
+  <strong>Bergen Road Pharmacy LLC</strong>
+  <br />
+  239 Old Bergen Rd
+  <br />
+  Jersey City, NJ 07305
+  <br />
+  United States
+  <br />
+  Phone: +1 201-434-8062
+  <br />
+  Email: bergenroadpharmacyllc@gmail.com
+</p>
+
 
         <h3 className="font-semibold text-[#0B2C4D]">2. No Medical Advice Disclaimer</h3>
         <ul className="list-disc ml-5 space-y-1">
