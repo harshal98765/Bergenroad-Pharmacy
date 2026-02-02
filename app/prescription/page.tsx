@@ -109,7 +109,7 @@ export default function TransferPrescription() {
     setLoading(true)
 
     const response = await fetch(
-      "https://rxflow-backend-80te.onrender.com/api/mail/transfer",
+      "https://bergenroad-backend.onrender.com/api/mail/transfer",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

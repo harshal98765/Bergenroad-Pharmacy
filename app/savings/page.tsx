@@ -77,7 +77,7 @@ export default function SavingsCopayHelp() {
     setLoading(true)
 
     const response = await fetch(
-      'https://rxflow-backend-80te.onrender.com/api/mail/savings-request',
+      'https://bergenroad-backend.onrender.com/api/mail/savings-request',
       {
         method: 'POST',
         body: formData, // ✅ multipart/form-data

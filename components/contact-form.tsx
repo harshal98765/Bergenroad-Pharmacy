@@ -46,7 +46,7 @@ export default function ContactForm() {
       setLoading(true)
 
       const response = await fetch(
-        "https://rxflow-backend-80te.onrender.com/api/mail/contact",
+        "https://bergenroad-backend.onrender.com/api/mail/contact",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -95,7 +95,7 @@
         setLoading(true)
 
         await fetch(
-          'https://rxflow-backend-80te.onrender.com/api/mail/medication-availability',
+          'https://bergenroad-backend.onrender.com/api/mail/medication-availability',
           {
             method: 'POST',
             headers: {
