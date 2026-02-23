@@ -22,7 +22,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: {
     default: "Bergen Road Pharmacy – Local Pharmacy in Jersey City, NJ",
-    template: "%s | Bergen Road Pharmacy",
+    template: "%s | Bergen Road Pharmacys",
   },
 
   description:
