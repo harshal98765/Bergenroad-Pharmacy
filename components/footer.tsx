@@ -93,20 +93,14 @@ export default function Footer() {
               <h4 className="font-bold text-lg mb-4">Legal</h4>
               <ul className="space-y-2 text-primary-foreground/80">
                 <li>
-                  <button
-                    onClick={() => openLegalModal("privacy")}
-                    className="hover:text-primary-foreground transition"
-                  >
-                    Privacy Policy
-                  </button>
+                  <Link href="/privacy-policy" className="hover:text-primary-foreground transition">
+        Privacy Policy
+      </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => openLegalModal("terms")}
-                    className="hover:text-primary-foreground transition"
-                  >
-                    Terms of Service
-                  </button>
+                  <Link href="/terms-of-service" className="hover:text-primary-foreground transition">
+        Terms of Service
+      </Link>
                 </li>
                 <li>
                   <button
